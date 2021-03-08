@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Main Page on Data Security with Trend Micro</title>
+    <link>/</link>
+    <description>Recent content in Main Page on Data Security with Trend Micro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Trend Micro Cloud One</title>
+      <link>/00_introduction/01_cloud_one.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/00_introduction/01_cloud_one.html</guid>
+      <description>What is Trend Micro Cloud One? Trend Micro Cloud One, a security services platform for organizations building in the cloud, delivers the broadest and deepest cloud security offering in one solution, enabling you to secure your cloud infrastructure with clarity and simplicity. By considering your cloud projects and objectives holistically, Trend Micro Cloud One is able to provide powerful security, while you leverage all of the benefits and efficiencies the cloud offers your business.</description>
+    </item>
+    
+    <item>
+      <title>Cloud One File Storage Security</title>
+      <link>/00_introduction/02_file_storage_security.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/00_introduction/02_file_storage_security.html</guid>
+      <description>File Storage Security File Storage Security is part of the Trend Micro Cloud One™ security service platform, helping your organization to build and run applications securely by offering controls that work across your existing infrastructure or modern code streams, development toolchains, and multiplatform requirements. File Storage Security helps ensure your Amazon S3 buckets are free from malware by deploying cloud-native security that can be integrated into your custom Amazon S3 workflows.</description>
+    </item>
+    
+    <item>
+      <title>Test your Deploy</title>
+      <link>/02_deploy/03_test_deploy.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/02_deploy/03_test_deploy.html</guid>
+      <description>Testing your Deploy To test your deployment, you&amp;rsquo;ll need to generate a malware detection using the eicar file. Follow the instructions below. There is also a video demonstration if you prefer.
+ Obtain the EICAR file:
+Temporarily disable your virus scanner, otherwise it will catch the eicar file and delete it. Go to the EICAR file page and download eicar_com.zip or any of the other versions of this file.</description>
+    </item>
+    
+    <item>
+      <title>Cloud Watch Visibility</title>
+      <link>/03_security_visibility/05_cloud_watch.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/03_security_visibility/05_cloud_watch.html</guid>
+      <description> Monitoring your Scans </description>
+    </item>
+    
+    <item>
+      <title>Slack Integration</title>
+      <link>/03_security_visibility/06_slack_integration.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/03_security_visibility/06_slack_integration.html</guid>
+      <description> Monitoring your Scans </description>
+    </item>
+    
+    <item>
+      <title>Gain Security Visibility</title>
+      <link>/04_automation/07_promote_and_quarantine.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/04_automation/07_promote_and_quarantine.html</guid>
+      <description> Monitoring your Scans </description>
+    </item>
+    
+    <item>
+      <title>Gain Security Visibility</title>
+      <link>/04_automation/08_securityhub_integration.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/04_automation/08_securityhub_integration.html</guid>
+      <description> Monitoring your Scans </description>
+    </item>
+    
+  </channel>
+</rss>

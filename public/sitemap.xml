@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/00_introduction.html</loc>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+  </url>
+  
+  <url>
+    <loc>/00_introduction/01_cloud_one.html</loc>
+  </url>
+  
+  <url>
+    <loc>/00_introduction/02_file_storage_security.html</loc>
+  </url>
+  
+  <url>
+    <loc>/01_requirements.html</loc>
+  </url>
+  
+  <url>
+    <loc>/02_deploy.html</loc>
+  </url>
+  
+  <url>
+    <loc>/02_deploy/03_test_deploy.html</loc>
+  </url>
+  
+  <url>
+    <loc>/03_security_visibility.html</loc>
+  </url>
+  
+  <url>
+    <loc>/03_security_visibility/05_cloud_watch.html</loc>
+  </url>
+  
+  <url>
+    <loc>/03_security_visibility/06_slack_integration.html</loc>
+  </url>
+  
+  <url>
+    <loc>/04_automation.html</loc>
+  </url>
+  
+  <url>
+    <loc>/04_automation/07_promote_and_quarantine.html</loc>
+  </url>
+  
+  <url>
+    <loc>/04_automation/08_securityhub_integration.html</loc>
+  </url>
+  
+  <url>
+    <loc>/05_cleanup.html</loc>
+  </url>
+  
+  <url>
+    <loc>/06_results.html</loc>
+  </url>
+  
+  <url>
+    <loc>/categories.html</loc>
+  </url>
+  
+  <url>
+    <loc>/tags.html</loc>
+  </url>
+  
+</urlset>

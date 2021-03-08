@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.68.3" />
+    <meta name="description" content="Data Security with Trend Micro">
+<meta name="author" content="Felipe Costa @ Trend Micro">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Trend Micro Cloud One :: Data Security with Trend Micro</title>
+
+    
+    <link href="/css/nucleus.css?1615211022" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1615211022" rel="stylesheet">
+    <link href="/css/hybrid.css?1615211022" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1615211022" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1615211022" rel="stylesheet">
+    <link href="/css/auto-complete.css?1615211022" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1615211022" rel="stylesheet">
+    <link href="/css/theme.css?1615211022" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1615211022" rel="stylesheet">
+    
+    <link href="/css/theme-mine.css?1615211022" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1615211022"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/00_introduction/01_cloud_one.html">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a href="/" title="Go home"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 30" width="60%" style="padding:20px 0px;"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg></a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1615211022"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1615211022"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1615211022"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='/'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/00_introduction.html" title="Introduction" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/00_introduction.html">
+          <b>1. </b>Introduction
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/00_introduction/01_cloud_one.html" title="Trend Micro Cloud One" class="dd-item active">
+        <a href="/00_introduction/01_cloud_one.html">
+        Trend Micro Cloud One
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/00_introduction/02_file_storage_security.html" title="Cloud One File Storage Security" class="dd-item ">
+        <a href="/00_introduction/02_file_storage_security.html">
+        Cloud One File Storage Security
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/01_requirements.html" title="Requirements" class="dd-item
+        
+        
+        
+        ">
+      <a href="/01_requirements.html">
+          <b>2. </b>Requirements
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/02_deploy.html" title="Deploy Cloud One File Storage Security" class="dd-item
+        
+        
+        
+        ">
+      <a href="/02_deploy.html">
+          <b>3. </b>Deploy Cloud One File Storage Security
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/02_deploy/03_test_deploy.html" title="Test your Deploy" class="dd-item ">
+        <a href="/02_deploy/03_test_deploy.html">
+        Test your Deploy
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/03_security_visibility.html" title="Gain Security Visibility" class="dd-item
+        
+        
+        
+        ">
+      <a href="/03_security_visibility.html">
+          <b>4. </b>Gain Security Visibility
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/03_security_visibility/05_cloud_watch.html" title="Cloud Watch Visibility" class="dd-item ">
+        <a href="/03_security_visibility/05_cloud_watch.html">
+        <b>4. </b>Cloud Watch Visibility
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/03_security_visibility/06_slack_integration.html" title="Slack Integration" class="dd-item ">
+        <a href="/03_security_visibility/06_slack_integration.html">
+        <b>4. </b>Slack Integration
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/04_automation.html" title="Automate S3 Security" class="dd-item
+        
+        
+        
+        ">
+      <a href="/04_automation.html">
+          <b>5. </b>Automate S3 Security
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/04_automation/07_promote_and_quarantine.html" title="Gain Security Visibility" class="dd-item ">
+        <a href="/04_automation/07_promote_and_quarantine.html">
+        Gain Security Visibility
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/04_automation/08_securityhub_integration.html" title="Gain Security Visibility" class="dd-item ">
+        <a href="/04_automation/08_securityhub_integration.html">
+        Gain Security Visibility
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/05_cleanup.html" title="Cleanup" class="dd-item
+        
+        
+        
+        ">
+      <a href="/05_cleanup.html">
+          <b>6. </b>Cleanup
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/06_results.html" title="Conclusions and Results" class="dd-item
+        
+        
+        
+        ">
+      <a href="/06_results.html">
+          <b>7. </b>Conclusions and Results
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://awsworkshop.io"><i class='fas fa-graduation-cap'></i> Modernization Workshops</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://aws.amazon.com/builders-library/"><i class='fas fa-tools'></i> AWS Builders Library</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://aws.amazon.com/blogs/modernizing-with-aws/"><i class='far fa-lightbulb'></i> Modernization with AWS</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://aws.amazon.com/marketplace/pp/B01LXMNGHB/"><i class='fas fa-chalkboard-teacher'></i> Trend Micro on AWS Marketplace</a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://cloudone.trendmicro.com/SignUp.screen"><i class='fas fa-chalkboard-teacher'></i> Sign-Up for Trend Micro Trial Account</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+
+    <a href="https://aws.amazon.com/privacy/?nc1=f_pr">Privacy</a> | <a
+        href="https://aws.amazon.com/terms/?nc1=f_pr">Site Terms</a> | © 2020, Amazon Web Services, Inc. or its
+    affiliates. All rights reserved.
+
+</left>
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Main Page</a> > <a href='/00_introduction.html'>Introduction</a> > Trend Micro Cloud One
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#what-is-trend-micro-cloud-one">What is Trend Micro Cloud One?</a></li>
+<li><a href="#benefits">Benefits</a></li>
+<li><a href="#how-does-cloud-one-helps">How Does Cloud One Helps?</a></li>
+<li><a href="#learn-more">Learn More</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Trend Micro Cloud One
+            </h1>
+          
+
+        
+
+
+
+
+<h3 id="what-is-trend-micro-cloud-one">What is Trend Micro Cloud One?</h3>
+
+<p>Trend Micro Cloud One, a security services platform for organizations building in the cloud, delivers the broadest and deepest cloud security offering in one solution, enabling you to secure your cloud infrastructure with clarity and simplicity. By considering your cloud projects and objectives holistically, Trend Micro Cloud One is able to provide powerful security, while you leverage all of the benefits and efficiencies the cloud offers your business. Comprised of multiple services designed to meet specific cloud security needs, Trend Micro Cloud One gives you the flexibility to solve your challenges today, and the innovation to evolve with your cloud services in the future.</p>
+
+<p><img src="/images/cloudone.png" alt="Diagram" /></p>
+
+<h3 id="benefits">Benefits</h3>
+
+<ul>
+<li><p><b>Automated</b>: Security as code lets your DevOps teams bake security into their build pipeline to release continuously and frequently. With built-in automation, including automated discovery and deployment, quick-start templates, and our Automation Center, secure your environment and meet compliance requirements quickly.</p></li>
+
+<li><p><b>Flexible</b>: Builder’s choice. Security for your hybrid cloud, multi-cloud, and multi-service environments, as well as protection for any vintage of application delivery—with broad platform support.</p></li>
+
+<li><p><b>All-in-One Solution</b>: One platform that has the breadth, depth, and innovation required to meet and manage your cloud security needs today, and in the future.</p></li>
+</ul>
+
+<h3 id="how-does-cloud-one-helps">How Does Cloud One Helps?</h3>
+
+<p>No matter where you are at in your cloud journey, Trend Micro Cloud One has you covered. From virtualization and cloud migration, to DevOps, container, and serverless security—get an automated, flexible, and all-in-one solution for your cloud security priorities. By not having to re-architect, by integrating with your existing tools and processes, and by focusing on automation, Trend Micro Cloud One will save you valuable time and resources while enhancing your security posture.</p>
+
+<p>We recognize that there are different drivers behind your constantly evolving cloud security priorities. We also understand all of the continuous work it takes to secure your complex and fast-paced multi-cloud environment—so let’s simplify it.</p>
+
+<ul>
+<li><p><b>Cloud Migration</b>: The transition to the cloud isn’t as simple as clicking a button, and having a hybrid and multi-cloud strategy is the norm. That’s why Trend Micro built the Trend Micro Cloud One platform with the ability to secure physical, virtual, and multi-cloud environments.</p></li>
+
+<li><p><b>Cloud-Native Application</b>: Working hard to deliver fast and iterate often, you are leveraging code in new ways and from different sources, such as infrastructure as code, open source, and public code repositories, which can introduce additional risk. Making matters more complicated, you have adopted new cloud services and processes to help you meet your objectives. You need security that supports this dynamic, complex approach without slowing you down. Trend Micro Cloud One does just that, by providing solutions for DevOps, cloud storage, cloud workloads, containers, and serverless.</p></li>
+
+<li><p><b>Cloud Operational Excellence</b>: Organization are adopting a cloud center of excellence model, with the goal of creating repeatable, consistent, secure, and compliant infrastructures that can be leveraged throughout the organization. Trend Micro Cloud one is optimized to be cloud efficient and will help you meet governance, compliance, and assurance requirements quickly.</p></li>
+</ul>
+
+<video width="1100" height="600" autoplay controls>
+<source src="/images/cloudone.mp4" type="video/mp4">
+</video>
+
+<h3 id="learn-more">Learn More</h3>
+
+<p>To learn more about our hybrid cloud security capabilities or to take a full test drive, visit <a href="https://www.trendmicro.com/cloudone">Trend Micro Cloud One page</a></p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/00_introduction.html" title="Introduction"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/00_introduction/02_file_storage_security.html" title="Cloud One File Storage Security" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1615211022"></script>
+    <script src="/js/perfect-scrollbar.min.js?1615211022"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1615211022"></script>
+    <script src="/js/jquery.sticky.js?1615211022"></script>
+    <script src="/js/featherlight.min.js?1615211022"></script>
+    <script src="/js/highlight.pack.js?1615211022"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1615211022"></script>
+    <script src="/js/learn.js?1615211022"></script>
+    <script src="/js/hugo-learn.js?1615211022"></script>
+    
+        
+            <script src="/mermaid/mermaid.js?1615211022"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

@@ -1,0 +1,120 @@
+[
+{
+	"uri": "/00_introduction.html",
+	"title": "Introduction",
+	"tags": [],
+	"description": "",
+	"content": " Cloud Object Storage (S3) Back in March/2006, when Amazon Simple Storage Service (Amazon S3) was launched and created the first generally available AWS service, over the time, data storage and usage has exploded, and the world has never been the same. Amazon S3 has virtually unlimited scalability, and unmatched availability, durability, security, and performance. Customers of all sizes and industries can use S3 to store any amount of data for a range of use cases, such as data lakes, websites, mobile applications, backup and restore, archive, and big data analytics. Amazon S3 provides easy-to-use management features so you can organize your data and configure finely-tuned access controls to meet your specific business, organizational, and compliance requirements.\n Increasing Cloud-Native Storage Adoption Cloud storage is a major component of creating a cloud-native application today, as it affects performance, cost, scalability, availability, manageability, durability, and security. With the increase in cloud-native application development and the importance of file upload and transfer, file storage services are a logical choice for modern business requirements. With the speed of DevOps and growing internal application teams, many security engineers are not as engaged or aware of all the security gaps that may exist in their business domain. Consequently, this leads to a lack of insight and resources to monitor ongoing adoption and growth of storage systems across development environments. This extended pressure requires attentiveness and guardrails that will help an organization avoid security risk and breaches.\nThe examples and sample code provided in this workshop are intended to be consumed as instructional content. These will help you understand how various Trend Micro - Cloud One and AWS services can be architected to build a solution while demonstrating best practices along the way.  "
+},
+{
+	"uri": "/",
+	"title": "Main Page",
+	"tags": [],
+	"description": "",
+	"content": " Data Security with Trend Micro Welcome Welcome to the Data Security with Trend Micro hands-on workshop.\nIn this workshop, you will learn how to scan your files in S3 buckets for malware and integrate into your custom workflows, by automating with your current resources, directly in your AWS environment.\nUsing Trend Micro - Cloud One, AWS S3, AWS Lambda, AWS SQS, AWS SNS and AWS Cloud Formation, you’ll get hands-on experience implementing an automated Cloud Formation security stack to provide Data Security capabilities to your S3 buckets.\nWho is Trend Micro? We\u0026rsquo;re a global leader in cybersecurity that helps make the world safe for exchanging digital information. Leveraging over 30 years of security expertise, global threat research, and continuous innovation, Trend Micro enables resilience for businesses, governments, and consumers. Security is our entire focus, and it shows. This single-minded passion has inspired our innovations that keep up with the bad guys despite a changing IT landscape, riskier user behavior, and constantly evolving threats.\n Learning Objectives The learning objectives of this workshop is to familiarize users with the installation, configuration, and usage of the Trend Micro Cloud One File Storage Security.\nExpected Duration: 1 Hour\nWho should attend  Site Reliability Engineers (SREs) Developers DevOps Engineers Cloud Architects Solution Architects Information Security GRC teams Tech leads and Program Managers (PM)  Before we dive in, let’s go through a refresher on the core concepts explored in this workshop.\n"
+},
+{
+	"uri": "/00_introduction/01_cloud_one.html",
+	"title": "Trend Micro Cloud One",
+	"tags": [],
+	"description": "",
+	"content": " What is Trend Micro Cloud One? Trend Micro Cloud One, a security services platform for organizations building in the cloud, delivers the broadest and deepest cloud security offering in one solution, enabling you to secure your cloud infrastructure with clarity and simplicity. By considering your cloud projects and objectives holistically, Trend Micro Cloud One is able to provide powerful security, while you leverage all of the benefits and efficiencies the cloud offers your business. Comprised of multiple services designed to meet specific cloud security needs, Trend Micro Cloud One gives you the flexibility to solve your challenges today, and the innovation to evolve with your cloud services in the future.\nBenefits  Automated: Security as code lets your DevOps teams bake security into their build pipeline to release continuously and frequently. With built-in automation, including automated discovery and deployment, quick-start templates, and our Automation Center, secure your environment and meet compliance requirements quickly.\n Flexible: Builder’s choice. Security for your hybrid cloud, multi-cloud, and multi-service environments, as well as protection for any vintage of application delivery—with broad platform support.\n All-in-One Solution: One platform that has the breadth, depth, and innovation required to meet and manage your cloud security needs today, and in the future.\n  How Does Cloud One Helps? No matter where you are at in your cloud journey, Trend Micro Cloud One has you covered. From virtualization and cloud migration, to DevOps, container, and serverless security—get an automated, flexible, and all-in-one solution for your cloud security priorities. By not having to re-architect, by integrating with your existing tools and processes, and by focusing on automation, Trend Micro Cloud One will save you valuable time and resources while enhancing your security posture.\nWe recognize that there are different drivers behind your constantly evolving cloud security priorities. We also understand all of the continuous work it takes to secure your complex and fast-paced multi-cloud environment—so let’s simplify it.\n Cloud Migration: The transition to the cloud isn’t as simple as clicking a button, and having a hybrid and multi-cloud strategy is the norm. That’s why Trend Micro built the Trend Micro Cloud One platform with the ability to secure physical, virtual, and multi-cloud environments.\n Cloud-Native Application: Working hard to deliver fast and iterate often, you are leveraging code in new ways and from different sources, such as infrastructure as code, open source, and public code repositories, which can introduce additional risk. Making matters more complicated, you have adopted new cloud services and processes to help you meet your objectives. You need security that supports this dynamic, complex approach without slowing you down. Trend Micro Cloud One does just that, by providing solutions for DevOps, cloud storage, cloud workloads, containers, and serverless.\n Cloud Operational Excellence: Organization are adopting a cloud center of excellence model, with the goal of creating repeatable, consistent, secure, and compliant infrastructures that can be leveraged throughout the organization. Trend Micro Cloud one is optimized to be cloud efficient and will help you meet governance, compliance, and assurance requirements quickly.\n   Learn More To learn more about our hybrid cloud security capabilities or to take a full test drive, visit Trend Micro Cloud One page\n"
+},
+{
+	"uri": "/00_introduction/02_file_storage_security.html",
+	"title": "Cloud One File Storage Security",
+	"tags": [],
+	"description": "",
+	"content": " File Storage Security File Storage Security is part of the Trend Micro Cloud One™ security service platform, helping your organization to build and run applications securely by offering controls that work across your existing infrastructure or modern code streams, development toolchains, and multiplatform requirements. File Storage Security helps ensure your Amazon S3 buckets are free from malware by deploying cloud-native security that can be integrated into your custom Amazon S3 workflows.\nFile Storage Security is backed by Trend Micro Research, which continuously monitors and collects threat data from across the globe by employing advanced detection analytics to immediately block attacks before they can harm your organization.\nUnderstanding How Trend Micro Can Help Secure Your Object Storage There are two main ways to use File Storage Security in your AWS Infrastructure:\n File Upload Scan -\u0026gt; Any cloud-native application that uses the power of the cloud to provide features integrated with Amazon S3 buckets could be exposed to malware. File Storage Security allows customers to integrate scan capabilities directly to their AWS accounts, so all of the files you receive in your Amazon S3 buckets from external sources can be scanned for malware before your application can consume the data.\n Automated Workflow -\u0026gt; Development teams leverage event-driven designs with Amazon S3 to automate the processing of data uploaded to a bucket. File Storage Security was designed with this architecture in mind allowing development teams to seamlessly integrate file scanning into their automated workflow.\n  Architecture Cloud-native application architectures incorporate cloud file/object storage services into their workflow, creating a new attack vector where they are vulnerable to malicious files. File Storage Security protects the workflow through innovative techniques, such as malware scanning, integration into your custom workflows, and broad cloud storage platform support – freeing you to go further and do more. File Storage Security provides flexible implementation options, including a multi-bucket promotional model (scanning bucket to quarantine/clean bucket) or an efficient single-bucket architecture.\nFile Storage Security’s architecture was built to be simple to understand and monitor all of the buckets. As soon as a new file is uploaded to the bucket, this will generate a SQS message inside your AWS account that will trigger an AWS Lambda function. The function will execute the scan and tag the file as malicious or clean, depending on the scan result. It is also possible to connect plugins to perform additional actions, for example, as soon the file is tagged as malicious, the plugin moves the tagged file to a quarantine bucket.\nDigging a little deeper into the architecture details, the overall deployment is made up of two different stacks:\n Storage Stack -\u0026gt; This stack is responsible for accepting the notification for the Amazon S3 bucket, as well as sending newly uploaded files to the Scanner Stack for the security scan. After the scan is complete, an Amazon SNS topic is published and the file is tagged as “malicious” or “clean”—additional plugins are available to add more functionality to the stack.\n Scanner Stack -\u0026gt; This stack is responsible for executing the scan and publishing the results to the Amazon SNS ScanResultTopic. When the Scanner Stack receives the request from the Storage Stack, its processes it and uses an AWS Lambda function to execute the scan. Like many Trend Micro technologies, File Storage Security can leverage Trend Micro™ Smart Protection Network™ for the latest threat information.\n  In order to launch both stacks, you must leverage the following CloudFormation Templates: FSSScanner-Stack.template and FSS-Storage-Stack.template. We also offer an all-in-one stack that launches both, called FSS-All-In-One.template. To help security and DevOps teams automate their workflows with File Storage Security, all CloudFormation Templates are available in our GitHub repository. For additional plugins, we have created a separate GitHub repository to enable you to add more functionality, including post-scan actions to permit files to either be pass or be quarantined.  "
+},
+{
+	"uri": "/01_requirements.html",
+	"title": "Requirements",
+	"tags": [],
+	"description": "",
+	"content": " File Storage Security Workshop: Requirements  A Cloud One Account. Sign up for free trial now if it\u0026rsquo;s not already the case!\n An AWS Account with AdministratorAccess permission, Sign up here if it\u0026rsquo;s not already the case! You can learn about the AdministratorAccess permissions here\n An S3 bucket that you want to use in this workshop, if you don\u0026rsquo;t have one, you can learn how to create one here\n  File Storage Security can reside in the following Amazon Web Services (AWS) regions:\n US East (N. Virginia) us-east-1 US East (Ohio) us-east-2 US West (N. California) us-west-1 US West (Oregon) us-west-2 Asia Pacific (Mumbai) ap-south-1 Asia Pacific (Osaka) ap-northeast-3 Asia Pacific (Seoul) ap-northeast-2 Asia Pacific (Singapore) ap-southeast-1 Asia Pacific (Sydney) ap-southeast-2 Asia Pacific (Tokyo) ap-northeast-1 Canada (Central) ca-central-1 Europe (Frankfurt) eu-central-1 Europe (Ireland) eu-west-1 Europe (London) eu-west-2 Europe (Paris) eu-west-3 Europe (Stockholm) eu-north-1 South America (São Paulo) sa-east-1  For updated information, please refer to the FileStorage Security Region Support Page\n "
+},
+{
+	"uri": "/02_deploy.html",
+	"title": "Deploy Cloud One File Storage Security",
+	"tags": [],
+	"description": "",
+	"content": " Deployment: Best way to learn is to get our hands durty, so let\u0026rsquo;s deploy File Storage Security to our AWS Account. First of all, make sure that all the requirements are meet, then:\nGo to Cloud One File Storage Security, here: https://cloudone.trendmicro.com/filestorage/deployment, it will request the login information for the Cloud One, in case you don\u0026rsquo;t have it, check the requirements page that has all the details that you will need.\nClick on \u0026ldquo;Deploy\u0026rdquo; and select Scanner Stack and Storage Stack, to deploy the full solution to your AWS account.\nSelect the AWS region that best suit for you and click on Launch Stack, this will redirect you to your AWS account in the region that you choose to deploy the stack. Make sure that you\u0026rsquo;re logged in and has the correct permissions, you can check the details of the permissions required in the Requirements section.\nYou can verify the Cloud Formation code by clicking in Review Stack, to make it easier, you can also verify the CLoud Formation code by clicking the buttons below:\n All in One Template  Scanner Stack  Storage Stack  In the Cloud Formation page the only required parameter here is the name of choose bucket, which is represented by the S3BucketToScan. It also supports differents parameters to customize your installation, like Resource prefixes and optional KMS integration, for more details about these check our Documentation.\nAfter deploying the all-in-one stack, you must configure the scanner and storage stack Amazon Resource Names (ARNs). The ARNs map a scanner stack to a storage stack, allowing them to be aware of each other.\nGo to CloudFormation \u0026gt; Stacks \u0026gt; your all-in-one stack \u0026gt; Outputs tab and copy and paste the ScannerStackManagementRoleARN and StorageStackManagementRoleARN into the File Storage Security console.\nThen Click Submit. You see a couple of success messages at the bottom.\n"
+},
+{
+	"uri": "/02_deploy/03_test_deploy.html",
+	"title": "Test your Deploy",
+	"tags": [],
+	"description": "",
+	"content": " Testing your Deploy To test your deployment, you\u0026rsquo;ll need to generate a malware detection using the eicar file. Follow the instructions below. There is also a video demonstration if you prefer.\n Obtain the EICAR file:\nTemporarily disable your virus scanner, otherwise it will catch the eicar file and delete it. Go to the EICAR file page and download eicar_com.zip or any of the other versions of this file.\nAdd the eicar file to your S3 bucket:\nIn AWS, go to Services \u0026gt; S3 and find your S3 bucket to scan, click Upload and upload the file that you downloaded. File Storage Security will scans the file and detects as a malware.\nYou cna also use the AWS CLI to upload files, check this example:\naws s3 sync eicar.txt s3://my-bucket/path To know more on how to use the AWS CLI, check the Installation and Configuration documentation\nNow you can examine the tags from the scan result, still in your S3 bucket, click in the file that you uploaded, then scroll to the Tags section.\nLook for the following tags:\nfss-scan-date date_and_time fss-scan-result malicious fss-scanned true The tags indicate that File Storage Security scanned the file and tagged it correctly as malware. You have now tested your File Storage Security deployment.\nRemember to re-enable your virus scanner after testing is complete.  "
+},
+{
+	"uri": "/03_security_visibility.html",
+	"title": "Gain Security Visibility",
+	"tags": [],
+	"description": "",
+	"content": " Monitoring your Scans "
+},
+{
+	"uri": "/03_security_visibility/05_cloud_watch.html",
+	"title": "Cloud Watch Visibility",
+	"tags": [],
+	"description": "",
+	"content": " Monitoring your Scans "
+},
+{
+	"uri": "/03_security_visibility/06_slack_integration.html",
+	"title": "Slack Integration",
+	"tags": [],
+	"description": "",
+	"content": " Monitoring your Scans "
+},
+{
+	"uri": "/04_automation.html",
+	"title": "Automate S3 Security",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/04_automation/07_promote_and_quarantine.html",
+	"title": "Gain Security Visibility",
+	"tags": [],
+	"description": "",
+	"content": " Monitoring your Scans "
+},
+{
+	"uri": "/04_automation/08_securityhub_integration.html",
+	"title": "Gain Security Visibility",
+	"tags": [],
+	"description": "",
+	"content": " Monitoring your Scans "
+},
+{
+	"uri": "/05_cleanup.html",
+	"title": "Cleanup",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/06_results.html",
+	"title": "Conclusions and Results",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/categories.html",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags.html",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
