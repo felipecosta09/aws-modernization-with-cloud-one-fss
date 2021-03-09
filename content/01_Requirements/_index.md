@@ -7,9 +7,9 @@ pre: "<b>2. </b>"
 
 # File Storage Security Workshop:
 
-## Requirements
+### Requirements
 
-* A Cloud One Account. [Sign up for free trial now](https://www.trendmicro.com/product_trials/download/index/us/168) if it's not already the case!
+* A Cloud One Account. [Sign up for free trial now](https://cloudone.trendmicro.com/SignUp.screen) if it's not already the case!
 
 * An <b>AWS Account</b> with <b>AdministratorAccess</b> permission, [Sign up here](https://portal.aws.amazon.com/billing/signup#/start) if it's not already the case! You can learn about the <b>AdministratorAccess</b> permissions [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html)
 
