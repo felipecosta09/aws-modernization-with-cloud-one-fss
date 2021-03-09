@@ -1,10 +1,10 @@
 ---
-title: "Test your Deploy"
+title: "Testing your Deployment"
 chapter: false
 weight: 70
 ---
 
-### Testing your Deploy
+### Generating your First Detection
 
 To test your deployment, you'll need to generate a malware detection using the eicar file. Follow the instructions below. There is also a video demonstration if you prefer.
 
@@ -38,7 +38,7 @@ fss-scan-date date_and_time
 fss-scan-result malicious
 fss-scanned true
 ```
-The tags indicate that File Storage Security scanned the file and tagged it correctly as malware. You have now tested your File Storage Security deployment.
+The tags indicate that File Storage Security scanned the file and tagged it correctly as malware. You have now tested your File Storage Security deployment :+1:
 
 {{% notice warning %}}
 <p style='text-align: left;'>

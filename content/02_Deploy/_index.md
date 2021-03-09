@@ -6,7 +6,7 @@ pre: "<b>3. </b>"
 ---
 
 
-### Deployment:
+# Deployment
 
 Best way to learn is to get our hands durty, so let's deploy File Storage Security to our AWS Account. First of all, make sure that all the requirements are meet, then:
 
@@ -41,3 +41,5 @@ Go to CloudFormation > Stacks > your all-in-one stack > Outputs tab and copy and
 Then Click Submit. You see a couple of success messages at the bottom.
 
 ![Diagram](/images/fss-two-stacks.png)
+
+You have now completed the deployment of the All-in-One stack :tada:, so let's test our deployment.
