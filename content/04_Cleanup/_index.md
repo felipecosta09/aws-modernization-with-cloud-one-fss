@@ -1,7 +1,7 @@
 ---
 title: "Cleanup"
 chapter: true
-weight: 130
+weight: 120
 pre: "<b>5. </b>"
 ---
 

@@ -31,7 +31,7 @@ We recognize that there are different drivers behind your constantly evolving cl
 
 - <b>Cloud Operational Excellence</b>: Organization are adopting a cloud center of excellence model, with the goal of creating repeatable, consistent, secure, and compliant infrastructures that can be leveraged throughout the organization. Trend Micro Cloud one is optimized to be cloud efficient and will help you meet governance, compliance, and assurance requirements quickly.
 
-<video width="1100" height="600" autoplay controls>
+<video width="800" height="600"  autoplay controls>
 <source src="/images/cloudone.mp4" type="video/mp4">
 </video>
 
