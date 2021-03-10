@@ -8,7 +8,7 @@ weight: 70
 
 To test your deployment, you'll need to generate a malware detection using the eicar file. Follow the instructions below. There is also a video demonstration if you prefer.
 
-<video width="1100" height="600" controls loop >
+<video width="800" height="600" controls loop >
 <source src="/images/fss_detection.mp4" type="video/mp4">
 </video>
 
