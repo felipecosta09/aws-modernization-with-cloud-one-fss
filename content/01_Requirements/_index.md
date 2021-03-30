@@ -9,13 +9,13 @@ pre: "<b>2. </b>"
 
 ### Requirements
 
-* A Cloud One Account. [Sign up for free trial now](https://cloudone.trendmicro.com/SignUp.screen) if it's not already the case!
+* A Cloud One Account. [Sign up for free trial now](https://cloudone.trendmicro.com/SignUp.screen) if you don't have a Trend Micro - Cloud One Account yet.
 
 * An <b>AWS Account</b> with <b>AdministratorAccess</b> permission, [Sign up here](https://portal.aws.amazon.com/billing/signup#/start) if it's not already the case! You can learn about the <b>AdministratorAccess</b> permissions [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html)
 
-* An S3 bucket that you want to use in this workshop, if you don't have one, you can learn how to create one [here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/create-bucket-overview.html)
+* An Amazon S3 bucket that you want to use in this workshop, if you don't have one, you can learn how to create one [here](https://docs.aws.amazon.com/AmazonS3/latest/userguide/create-bucket-overview.html)
 
-File Storage Security can reside in the following Amazon Web Services (AWS) regions:
+Cloud One - File Storage Security can reside in the following Amazon Web Services (AWS) regions:
 
 - US East (N. Virginia) us-east-1
 - US East (Ohio) us-east-2
@@ -36,5 +36,5 @@ File Storage Security can reside in the following Amazon Web Services (AWS) regi
 - South America (São Paulo) sa-east-1
 
 {{% notice info %}}
-For updated information, please refer to the <a href="https://cloudone.trendmicro.com/docs/file-storage-security/what-is-fss/#AWSRegion">FileStorage Security Region Support Page</a>
+For updated information, please refer to the <a href="https://cloudone.trendmicro.com/docs/file-storage-security/what-is-fss/#AWSRegion">Cloud One - File Storage Security Region Support Page</a>
 {{% /notice %}}
