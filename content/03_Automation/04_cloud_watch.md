@@ -8,9 +8,14 @@ weight: 90
 
 File Storage Security logs are in AWS CloudWatch Logs. These logs contain a bit more information than what's available in the ```fss-* tags```.
 
-To view the scan result logs in CloudWatch Logs, go to your AWS account, in CloudFormation > your scanner stack > Resources > ScannerLogGroup link. The CloudWatch service appears with Log groups selected on the left.
+To view the scan result logs in AWS CloudWatch Logs, go to your AWS account, in CloudFormation > select your scanner stack > Resources > ScannerLogGroup link. 
 
-Under Log streams, click a log stream with a Last event time that is later than or equal to the time when you added the file to the Amazon S3 bucket to scan and expand the event message that starts with scanner result.
+![Diagram](/images/fss-monitoring-cloudwatch.png)
+
+The AWS CloudWatch service appears with Log groups selected on the left.
+
+Under Log streams, click on a log stream with a latest event time that is later than or equal to the time when you added the file to the Amazon S3 bucket to scan and expand the event message that starts with scanner result.
+
 
 A JSON code block appears containing information about the scan. Specifically, it includes:
 
@@ -18,6 +23,8 @@ A JSON code block appears containing information about the scan. Specifically, i
 * <b>sqs-message-id</b>: The unique ID of this event.
 * <b>file_url</b>: The URL to the scanned file in Amazon S3.
 * <b>scanner_status and scanner_status_message</b>
+
+![Diagram](/images/fss-cloudwatchevent.png)
 
 This pairing has the following values:
 
@@ -82,4 +89,4 @@ scanner result: {
 
 You did it :tada:!
 
-Now that your know how to verify File Storage Security logs and events in CloudWatch you can create your own automations based on CloudWatch data :rocket:
+Now that your know how to verify Cloud One - File Storage Security logs and events in AWS CloudWatch you can create your own automations based on CloudWatch data :rocket:

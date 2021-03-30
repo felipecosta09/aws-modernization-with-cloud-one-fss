@@ -5,7 +5,8 @@ weight: 100
 ---
 
 
-In this integration, we will make a lambda function send a Slack message every time that we have a new detection, you can deploy this automation using the AWS Console, AWS CLI or Makefile. In this example we will demonstrate using the AWS CLI:
+In this integration, we will make a Lambda function send a Slack message every time that we have a new detection on Cloud One - File Storage Security, you can deploy this automation using the AWS Console, AWS CLI or Makefile. In this example we will demonstrate using the AWS CLI:
+
 
 ### Requirements
 
@@ -115,3 +116,9 @@ aws lambda create-function --function-name <YOUR_FSS_SCAN_SEND_SLACK_NOTIFICATIO
         - `<YOUR_REGION>` is replaced by the region where the scanning bucket resides
         - `<SNS_TOPIC_ARN>` is replaced with the SNS topic ARN you found earlier.
 
+
+{{% notice note %}}
+<p style='text-align: left;'>
+If you need more details on how to deploy the post action for <b>Slack integration</b> here is more information in our <a href="https://github.com/trendmicro/cloudone-filestorage-plugins/tree/master/post-scan-actions/aws-python-slack-notification">GitHub</a> repository. 
+</p>
+{{% /notice %}}

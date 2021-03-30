@@ -1,5 +1,5 @@
 ---
-title: "Cloud One File Storage Security"
+title: "Cloud One -  File Storage Security"
 chapter: false
 weight: 30
 ---
