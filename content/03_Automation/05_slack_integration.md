@@ -5,7 +5,7 @@ weight: 100
 ---
 
 
-In this integration, we will make a lambda function send a Slack message every time that we have a new detection, you can deploy this automation using the AWS COnsole, AWS CLI or Makefile. In this example we will demonstrate using the AWS CLI:
+In this integration, we will make a lambda function send a Slack message every time that we have a new detection, you can deploy this automation using the AWS Console, AWS CLI or Makefile. In this example we will demonstrate using the AWS CLI:
 
 ### Requirements
 
