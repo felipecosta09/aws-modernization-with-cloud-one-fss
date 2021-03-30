@@ -6,7 +6,7 @@ weight: 110
 
 ### Prerequisites
 
-1. **Create S3 buckets**
+1. **Create Amazon S3 buckets**
     - Create a 'Promote bucket' to receive clean files. Example: `fss-promote`.
     - Create a 'Quarantine bucket' to receive quarantined files. Example: `fss-quarantine`.
 2. **Find the 'ScanResultTopic' SNS topic ARN**
@@ -47,7 +47,7 @@ To test that the application was deployed properly, you'll need to generate a ma
         1. Go to **CloudFormation > Stacks** > your all-in-one stack > your nested storage stack.
         2. In the main pane, click the **Outputs** tab and then copy the **ScanningBucket** string. Search the string in Amazon S3 console to find your ScanningBucket.
         3. Click **Upload** and upload `eicar_com.zip`. File Storage Security scans the file and detects malware.
-        4. Still in S3, go to your Quarantine bucket and make sure that `eicar.zip` file is present.
+        4. Still in Amazon S3, go to your Quarantine bucket and make sure that `eicar.zip` file is present.
         5. Go back to your ScanningBucket and make sure the `eicar.zip` is no longer there.
 
         > 📌 It can take 15-30 seconds or more for the 'move' operation to complete, and during this time, you may see the file in both buckets.

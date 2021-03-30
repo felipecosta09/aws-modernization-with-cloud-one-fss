@@ -20,7 +20,8 @@ Temporarily disable your virus scanner, otherwise it will catch the eicar file a
 
 Upload the eicar file to your Amazon S3 bucket that we define before to be scanning by Cloud One - File Storage Security.
 
-In AWS, go to Services > S3 and find your S3 bucket to scan, click <b>Upload</b> and upload the file that you downloaded. Cloud One - File Storage Security will scan the file. detects as a malware and will add tags information about it in the object.
+In AWS, go to Services > S3 and find your S3 bucket to scan, click <b>Upload</b> and upload the file that you downloaded. Cloud One - File Storage Security will scan the file, detects as a malware, and will add tags information about it in the object.
+
 
 You can also use the AWS CLI to upload files, check this example:
 
@@ -30,6 +31,7 @@ aws s3 sync eicar.txt s3://my-bucket/path
 To know more on how to use the AWS CLI, check the <a href="https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html">Installation</a> and <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html">Configuration</a> documentation
 
 Now that you have the object uploaded to Amazon S3 you can examine the tags from the scan results. In your Amazon S3 bucket, click in the file that you uploaded, then scroll to the <b>Tags</b> section, you will see the details like the example below:
+
 
 ![Diagram](/images/tags.png)
 

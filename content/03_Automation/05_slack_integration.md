@@ -7,6 +7,7 @@ weight: 100
 
 In this integration, we will make a Lambda function send a Slack message every time that we have a new detection on Cloud One - File Storage Security, you can deploy this automation using the AWS Console, AWS CLI or Makefile. In this example we will demonstrate using the AWS CLI:
 
+
 ### Requirements
 
 1. **Install and COnfigure the AWS CLI**

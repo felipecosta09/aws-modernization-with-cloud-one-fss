@@ -14,6 +14,7 @@ Welcome to the **Data Security with Trend Micro** hands-on workshop.
 
 In this workshop, you will learn how to scan your objects that are being uploaded to Amazon S3 buckets for malware  and integrate into your custom workflows, by automating with your current resources, directly in your AWS environment.
 
+
 Using Trend Micro - Cloud One, AWS S3, AWS Lambda, AWS SQS, AWS SNS and AWS Cloud Formation, you’ll get hands-on experience implementing an automated Cloud Formation security stack to provide Data Security capabilities to your Amazon S3 buckets.
 
 

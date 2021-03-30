@@ -16,6 +16,7 @@ The AWS CloudWatch service appears with Log groups selected on the left.
 
 Under Log streams, click on a log stream with a latest event time that is later than or equal to the time when you added the file to the Amazon S3 bucket to scan and expand the event message that starts with scanner result.
 
+
 A JSON code block appears containing information about the scan. Specifically, it includes:
 
 * <b>timestamp</b>: A unique number that corresponds to the time when the scan occurred.
