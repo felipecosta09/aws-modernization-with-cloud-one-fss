@@ -10,7 +10,7 @@ In this integration, we will make a Lambda function send a Slack message every t
 
 ### Requirements
 
-1. **Install and COnfigure the AWS CLI**
+1. **Install and Configure the AWS CLI**
         - Install the AWS command line interface (CLI). See [Installing the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html) for details.
 2. **Configure Slack Webhook App**
     - Create a Slack Channel to receive the notification
