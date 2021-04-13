@@ -4,13 +4,13 @@ chapter: true
 weight: 1
 ---
 
-# Data Security with Trend Micro
+# AWS S3 Bucket Malware Scanning with Trend Micro
 
 ![Trend Micro](/images/TM_logo.png)
 
 ### Welcome
 
-Welcome to the **Data Security with Trend Micro** hands-on workshop.
+Welcome to the **AWS S3 Bucket Malware Scanning with Trend Micro** hands-on workshop.
 
 In this workshop, you will learn how to scan your objects that are being uploaded to Amazon S3 buckets for malware  and integrate into your custom workflows, by automating with your current resources, directly in your AWS environment.
 
