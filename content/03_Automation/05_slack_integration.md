@@ -10,7 +10,7 @@ In this integration, we will make a Lambda function send a Slack message every t
 
 ### Requirements
 
-1. **Install and COnfigure the AWS CLI**
+1. **Install and Configure the AWS CLI**
         - Install the AWS command line interface (CLI). See [Installing the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html) for details.
 2. **Configure Slack Webhook App**
     - Create a Slack Channel to receive the notification
@@ -74,7 +74,7 @@ aws lambda create-function --function-name <YOUR_FSS_SCAN_SEND_SLACK_NOTIFICATIO
 --memory-size 512 \
 --handler handler.lambda_handler \
 --zip-file fileb://<YOUR_ZIP_NAME>.zip \
---region <YOUR_REGION>
+--region <YOUR_REGION> \
 --environment Variables=\{SLACK_URL=<YOUR_SLACK_URL>,SLACK_CHANNEL=<YOUR_SLACK_CHANNEL>,SLACK_USERNAME=<YOUR_SLACK_USERNAME>\}
 ```
 

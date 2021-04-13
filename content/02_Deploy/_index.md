@@ -8,7 +8,7 @@ pre: "<b>3. </b>"
 
 # Deployment
 
-Best way to learn is to get our hands durty, so let's deploy Cloud One - File Storage Security to our AWS Account. First of all, make sure that all the requirements are meet, then:
+The best way to learn is to get our hands dirty, so let's deploy Cloud One - File Storage Security to our AWS Account. First of all, make sure that all the requirements are meet, then:
 
 Go to Cloud One - File Storage Security, here: https://cloudone.trendmicro.com/filestorage/deployment, it will request the login information for the Cloud One, in case you don't have it, check the requirements page that has all the details that you will need to create your account. 
 
