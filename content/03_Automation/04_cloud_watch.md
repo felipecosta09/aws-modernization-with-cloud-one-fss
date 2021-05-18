@@ -6,18 +6,17 @@ weight: 90
 
 ### Monitoring your Scans with CloudWatch
 
-File Storage Security logs are in AWS CloudWatch Logs. These logs contain a bit more information than what's available in the ```fss-* tags```.
+File Storage Security logs are stored in CloudWatch Logs, which contain a bit more information than what’s available in the  ```fss-* tags```.
 
-To view the scan result logs in AWS CloudWatch Logs, go to your AWS account, in CloudFormation > select your scanner stack > Resources > ScannerLogGroup link. 
+To view the scan result logs in CloudWatch Logs, go to your AWS account, and click the following: CloudFormation > select your scanner stack > Resources > ScannerLogGroup. 
 
 ![Diagram](/images/fss-monitoring-cloudwatch.png)
 
-The AWS CloudWatch service appears with Log groups selected on the left.
+You’ll see the CloudWatch service appears on the left with log groups selected.
 
-Under Log streams, click on a log stream with a latest event time that is later than or equal to the time when you added the file to the Amazon S3 bucket to scan and expand the event message that starts with scanner result.
+Under log streams, click on a log stream with a latest event time that is later or equal to the time that you added the file to the Amazon S3 bucket to scan. Next, expand the event message that starts with scanner result.
 
-
-A JSON code block appears containing information about the scan. Specifically, it includes:
+A JSON code block appears containing information about the scan, such as:
 
 * <b>timestamp</b>: A unique number that corresponds to the time when the scan occurred.
 * <b>sqs-message-id</b>: The unique ID of this event.
@@ -30,20 +29,17 @@ This pairing has the following values:
 
 * <b>0</b>:  "successful scan": Indicates that the scan finished successfully.
 
-* <b>-1</b>: "invalid license status": Usually indicates that File Storage Security is not fully configured. The most likely reason for an incomplete configuration is that ARNs have not been submitted through the File Storage Security console or API yet. For instructions on submitting the ARNs, see Add Stacks or Deploy stacks using the API. This message could also indicate that your license is not valid, or that File Storage Security was not able to push a new license to your stack.
+* <b>-1</b>: "invalid license status": Usually indicates that File Storage Security is not fully configured. The most likely reason for an incomplete configuration is that ARNs have not been submitted through the File Storage Security console or API yet. For instructions on submitting the ARNs, see Add Stacks or Deploy Stacks using the API. This message could also indicate that your license is not valid, or that File Storage Security was not able to push a new license to your stack.
 
-* <b>-2</b>: "unsuccessful scan": Indicates that the ScannerLambda function was unable to scan the file.
+* <b>-2</b>: "unsuccessful scan": Indicates that an internal error occurred in the ScannerLambda function.
 
 * <b>-3</b>: "scanner error": Indicates that an internal error occurred in the ScannerLambda function.
 
-* <b>-4</b>: "unsuccessful scanner invocation": Indicates that the ScannerLambda function couldn't finish the scan. Either the scan timeout was reached, or there were too many files to scan causing a Lambda throttling error.
-scanning_result: Indicates scan details such as the scanned file's size as well as any found malware or errors.
+* <b>-4</b>: "unsuccessful scanner invocation": Indicates that the ScannerLambda function couldn’t finish the scan. Either the scan timeout was reached, or there were too many files to scan causing a Lambda throttling error. scanning_result: Indicates scan details such as the scanned file’s size as well as any found malware or errors.
 
-You can search for scan results using AWS CloudWatch Logs Insights. Below is an example of how to set up a query.
+You can search for scan results using CloudWatch Logs Insights. Below is an example of how to set up a query.
 
-In AWS, go to the CloudWatch service.
-On the left, under Logs, click Insights.
-In the main pane, click inside the Select log group(s) field, and enter ScannerLambda into the search box. Select the File Storage Security log group. It looks similar to:
+In AWS, go to the CloudWatch service. On the left, under Logs, click Insights. On the main pane, click inside the Select log group(s) field, and enter ScannerLambda into the search box. Select the File Storage Security log group. It looks similar to:
 
 ```
 /aws/lambda/FileStorageSec-ScannerLambda
@@ -89,4 +85,4 @@ scanner result: {
 
 You did it :tada:!
 
-Now that your know how to verify Cloud One - File Storage Security logs and events in AWS CloudWatch you can create your own automations based on CloudWatch data :rocket:
+Now that you know how to verify File Storage Security logs and events in CloudWatch you can create your own automations based on CloudWatch data :rocket:

@@ -5,7 +5,7 @@ weight: 100
 ---
 
 
-In this integration, we will make a Lambda function send a Slack message every time that we have a new detection on Cloud One - File Storage Security, you can deploy this automation using the AWS Console, AWS CLI or Makefile. In this example we will demonstrate using the AWS CLI:
+In this integration, we will make a Lambda function send a Slack message every time that we have a new detection in File Storage Security. You can deploy this automation using the AWS console, AWS CLI or Makefile. In this example we will demonstrate using the AWS CLI:
 
 
 ### Requirements
@@ -45,7 +45,7 @@ LAMBDA_TRUST="{
 aws iam create-role --role-name <YOUR_FSS_LAMBDA_SLACK_NOTIFICATION_ROLE> --assume-role-policy-document "${LAMBDA_TRUST}"
 ```
 
-Where the ```<YOUR_FSS_LAMBDA_SLACK_NOTIFICATION_ROLE>``` is replaced with the name you want to give to the role. Example: ***FSS_Lambda_Slack_Notification_Role***
+Where the ```<YOUR_FSS_LAMBDA_SLACK_NOTIFICATION_ROLE>``` is replaced with the name you want to give to the role, such as ***FSS_Lambda_Slack_Notification_Role***
 
 2. Attach the `AWSLambdaBasicExecutionRole` managed policy to the role:
 
@@ -62,7 +62,7 @@ aws iam attach-role-policy --role-name FSS_Lambda_Slack_Notification_Role --poli
 zip <YOUR_ZIP_NAME>.zip handler.py
 ```
 
-Where ```<YOUR_ZIP_NAME>``` is replaced with the name you want to give your Lambda function. Example: **scan-send-slack-notification**
+```<YOUR_ZIP_NAME>``` iis replaced with the name you want to give your Lambda function, such as **scan-send-slack-notification**
 
 3. Create the Lambda function, using backslashes (`\`) to separate the lines, as shown below:
 
@@ -78,7 +78,7 @@ aws lambda create-function --function-name <YOUR_FSS_SCAN_SEND_SLACK_NOTIFICATIO
 --environment Variables=\{SLACK_URL=<YOUR_SLACK_URL>,SLACK_CHANNEL=<YOUR_SLACK_CHANNEL>,SLACK_USERNAME=<YOUR_SLACK_USERNAME>\}
 ```
 
-- where:
+- The following will be replaced:
     - `<YOUR_FSS_SCAN_SEND_SLACK_NOTIFICATION>` is replaced with the name you want to give your Lambda function. Example: `FSS_Scan_Send_Slack_Notification`.
     - `<YOUR_FSS_LAMBDA_SLACK_NOTIFICATION_ROLE>` is replaced with the ARN of the role you previously created for the Lambda function. You can find the ARN in the AWS console under **Services > IAM > Roles** > your role > **Role ARN** field (at the top). Example: `arn:aws:iam::000000000000:role/FSS_Lambda_Slack_Notification_Role`.
     - `<YOUR_ZIP_NAME>` is replaced with the name of the ZIP file you created earlier. Example: `scan-send-slack-notification`
@@ -104,14 +104,14 @@ aws lambda create-function --function-name <YOUR_FSS_SCAN_SEND_SLACK_NOTIFICATIO
     - Enter the following AWS CLI command to subscribe your Lamdba function to the SNS topic:
         
         `aws sns subscribe --topic-arn <SNS_TOPIC_ARN> --protocol lambda --notification-endpoint <YOUR_LAMBDA_FUNCTION_ARN> --region <YOUR_REGION>`
-    - where:
+    - The following will be replaced:
         - `<SNS_TOPIC_ARN>` is replaced with the SNS topic ARN you found earlier.
         - `<YOUR_LAMBDA_FUNCTION_ARN>` is replaced with the Lambda function ARN you found earlier.
         - `<YOUR_REGION>` is replaced by the region where the scanning bucket resides
     - Lastly, grant the SNS service permission to invoke your function.
 
         `aws lambda add-permission --function-name <FUNCTION_NAME> --region <YOUR_REGION> --statement-id sns --action lambda:InvokeFunction --principal sns.amazonaws.com --source-arn <SNS_TOPIC_ARN>`
-    - where:
+    - The following will be replaced:
         - `<FUNCTION_NAME>` is replaced by the name of the Lambda function you created previously. Example: `FSS_Scan_Send_Slack_Notification`
         - `<YOUR_REGION>` is replaced by the region where the scanning bucket resides
         - `<SNS_TOPIC_ARN>` is replaced with the SNS topic ARN you found earlier.
@@ -119,6 +119,6 @@ aws lambda create-function --function-name <YOUR_FSS_SCAN_SEND_SLACK_NOTIFICATIO
 
 {{% notice note %}}
 <p style='text-align: left;'>
-If you need more details on how to deploy the post action for <b>Slack integration</b> here is more information in our <a href="https://github.com/trendmicro/cloudone-filestorage-plugins/tree/master/post-scan-actions/aws-python-slack-notification">GitHub</a> repository. 
+If you need more details on how to deploy the post action for <b>Slack integration</b> here is more information visit our <a href="https://github.com/trendmicro/cloudone-filestorage-plugins/tree/master/post-scan-actions/aws-python-slack-notification">GitHub</a> repository. 
 </p>
 {{% /notice %}}

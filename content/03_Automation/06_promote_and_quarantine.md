@@ -34,7 +34,7 @@ Check out [other installation methods](./other-installation-methods.md), such as
 
 ### Test the Application
 
-To test that the application was deployed properly, you'll need to generate a malware detection using the [eicar test file](https://secure.eicar.org/eicar.com "A file used for testing anti-malware scanners."), and then check the Quarantine bucket to make sure the `eicar` file was sent there successfully.
+To test that the application was deployed properly, you’ll need to generate a malware detection using the [eicar test file](https://secure.eicar.org/eicar.com "A file used for testing anti-malware scanners."), and then check the quarantine bucket to make sure the `eicar` file was sent there successfully.
 
 1. **Download the Eicar test file**
    - Temporarily disable your virus scanner or create an exception, otherwise it will catch the `eicar` file and delete it.
