@@ -49,6 +49,11 @@ You could do the same process with a safe file to see how File Storage Security 
 {{% /notice %}}
 
 
+You can also check the Scan Activity page if necessary. The scan history panel displays a bar chart of the files that have been scanned by File Storage Security. 📈
+
+![Diagram](/images/fss-dashboard.png)
+
+
 {{% notice warning %}}
 <p style='text-align: left;'>
 Remember to re-enable your anti-malware solution in your laptop after the test is complete.
